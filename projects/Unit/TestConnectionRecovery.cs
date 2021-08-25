@@ -39,6 +39,7 @@ using RabbitMQ.Client.Framing.Impl;
 using RabbitMQ.Client.Impl;
 
 using Xunit;
+using Xunit.Abstractions;
 
 #pragma warning disable 0618
 
@@ -69,7 +70,7 @@ namespace RabbitMQ.Client.Unit
         private readonly ushort _closeAtCount = 16;
         private string _queueName;
 
-        public TestConnectionRecovery()
+        public TestConnectionRecovery(ITestOutputHelper output) : base(output)
         {
             var rnd = new Random();
             _messageBody = new byte[4096];
