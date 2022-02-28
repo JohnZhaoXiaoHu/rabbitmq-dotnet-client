@@ -50,7 +50,7 @@ namespace RabbitMQ.Client.Unit
         {
         }
 
-        [Fact(Skip="FLAKY")]
+        [Fact]
         public void TestConnectionBlockedNotification()
         {
             _notified = false;
@@ -80,7 +80,7 @@ namespace RabbitMQ.Client.Unit
             }
         }
 
-        [Fact(Skip="FLAKY")]
+        [Fact]
         public void TestDisposeOnBlockedConnectionDoesNotHang()
         {
             _notified = false;

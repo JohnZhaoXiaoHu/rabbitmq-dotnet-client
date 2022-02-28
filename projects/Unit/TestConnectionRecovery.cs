@@ -704,7 +704,7 @@ namespace RabbitMQ.Client.Unit
             Assert.True(counter >= 3);
         }
 
-        [Fact]
+        [Fact(Skip="FLAKY")]
         public void TestRecoveryWithTopologyDisabled()
         {
             AutorecoveringConnection conn = CreateAutorecoveringConnectionWithTopologyRecoveryDisabled();
